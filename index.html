@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome with Deemou</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/dfc413c3c3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div class="left-side">
+            <div class="js-weather">
+                <span class="js-weather"></span>
+            </div>
+            <button name="menu">Menu <i class="fas fa-chevron-circle-right fa-lg"></i></button>
+            <div class="sidebar"> 
+                <ul class="sidebar__list">
+                    <li class="sidebar__btn" name="user_name"><button>Change your name</button></li>
+                    <li class="sidebar__btn" name="background"><button>Change Background Image</button></li>
+                    <li class="sidebar__btn--option sidebar__btn--bg"><button name="1">1</button><button name="2">2</button><button name="3">3</button></li>
+                    <li class="sidebar__btn" name="website"><button>Go to other website</button></li>
+                    <li class="sidebar__btn--option sidebar__btn--web">
+                        <span><a href="https://nomadcoders.co/"><button>Nomadcoders</button></a></span>
+                        <span><a href="https://github.com/"><button>Github</button></a></span>
+                        <span><a href="https://developer.mozilla.org/en-US/"><button>MDN</button></a></span>
+                        <span><a href="https://www.google.com/"><button>Google</button></a></span> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="center">
+            <div class="js-clock">
+                <h3>2021</h3>
+                <h1>00:00</h1>
+            </div>
+            <form class="js-form form">
+                <input type="text" placeholder="What is your name?" name="name" autofocus>
+            </form>
+            <h1 class="grettings"></h1>
+        </div>
+        <div class="right-side">
+            <div class="todo">
+                <div class="todo__input-box">
+                    <form class="todo__form">
+                        <input type="text" placeholder="Add a to do here!" />
+                        <span><i class="fas fa-eraser fa-3x"></i></span>
+                    </form>
+                </div>
+                <div class="todo__container">
+                    <div class="todo__list-box">
+                        <h2>Pending</h2>
+                        <ul class="todo__list js-pendingList"></ul>
+                    </div>
+                    <div class="todo__list-box">
+                        <h2>Finished</h2>
+                        <ul class="todo__list js-finishedList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="clock.js"></script>
+    <script src="gretting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

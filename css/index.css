@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    color: rgb(32, 21, 21);
+    font-family: 'Patrick Hand', cursive;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+
+input {
+    font-size:24px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+}
+
+.left-side {
+    width: 25%;
+}
+
+.center {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.js-clock {
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 50px;
+}
+.js-clock h1{
+    margin-top: -30px;
+}
+.js-clock h3{
+    margin-top: 0;
+}
+
+.form,
+.grettings {
+    display: none;
+    color: rgb(32, 21, 21);
+}
+
+.showing {
+    display: block;
+    font-size: 40px;
+}
+
+.todo li span {
+    font-size: 24px;
+    width: 240px;
+}
+
+.todo li {
+    transition: box-shadow 0.2s ease-in-out;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+.todo li:hover {
+  box-shadow: 0px 1px 5px -3px black;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.todo__input-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.todo__input-box input::placeholder {
+    text-align: center;
+}
+.todo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    align-items: flex-start;
+    border: 2px double rgb(238, 238, 238);
+    background-color: rgba(228, 225, 222, 0.6);
+}
+.todo__list-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    margin: 0px 20px;
+    border-radius: 25px;
+    padding: 20px 0px;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.todo__list-box:hover {
+    background-color: rgba(228, 225, 222, 0.6);
+    box-shadow: 0px 1px 10px -7px black;
+}
+.todo__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todo__list-box button {
+    background-color: inherit;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 5px;
+    padding: 3px 10px;
+    font-size: 25px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.todo__list-box button:focus {
+    outline: none;
+}
+
+@keyframes heartBeat {
+    0% {
+        color: white;
+        transform: none;
+    }
+    50% {
+        color: tomato;
+        transform: scale(1.3);
+    }
+    100% {
+        color: white;
+        transform: none;
+    }
+}
+
+.todo__list-box button:hover {
+    will-change: transform;
+    animation: heartBeat 1s linear infinite;
+}
+
+.js-weather {
+    color: rgb(32, 21, 21);
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 2s linear;
+}
+
+.left-side button {
+    border-radius: 0px 15px 15px 0px;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: -10px;
+}
+
+@keyframes showup {
+    to {
+        transform: none;
+    }
+}
+
+.left-side button[name='menu'] {
+    margin-top: 20%;
+    padding: 10px;
+    background-color: rgba(247, 142, 73 , 0.5);
+    transform: translateX(-65px);
+}
+
+.left-side button[name='menu']:hover {
+    animation: showup 1s ease-in-out forwards;
+}
+
+.fix-menu button[name='menu'] {
+    transform: none;
+}
+
+.sidebar {
+    display: none;
+}
+
+.show-sidebar {
+    display: block;
+}
+
+.sidebar__list {
+    list-style-type: none;
+}
+
+@keyframes appearBtnFromLeft {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.sidebar__btn {
+    margin: 30px 0px;
+    transform: translateX(-400px);
+    animation: appearBtnFromLeft 1s ease-in-out forwards;
+}
+
+.sidebar__btn:first-child {
+    animation-delay: 0.2s;
+}
+
+.sidebar__btn:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.sidebar__btn:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.sidebar__btn button{
+    background-color: rgba(250, 191, 103, 0.5);
+}
+
+@keyframes fadeInBtn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sidebar__btn--bg {
+    display: none;
+}
+
+.sidebar__btn--option button{
+    border-radius: 30%;
+    padding: 10px;
+    margin: 0px 20px;
+    margin-top: -10px;
+    background-color: rgba(238, 217, 102, 0.5);
+    opacity: 0;
+}
+
+.sidebar__btn--bg button:first-child {
+    animation-delay: 0.2s;
+}
+
+.sidebar__btn--bg button:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.sidebar__btn--bg button:last-child {
+    animation-delay: 0.8s;
+}
+
+.sidebar__btn--web {
+    display:none;
+    margin-top: -10px;
+}
+
+.sidebar__btn--web a {
+    padding: 10px 0px;
+}
+
+.sidebar__btn--web button {
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.sidebar__btn--web span:first-child {
+    animation-delay: 0.2s;
+}
+
+.sidebar__btn--web span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.sidebar__btn--web span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.sidebar__btn--web span:last-child {
+    animation-delay: 1.1s;
+}
+
+.show-sidebar__btn--web {
+    display:flex;
+    flex-direction: column;    
+}
+
+.show-sidebar__btn--web span {
+    opacity: 0;
+    margin-bottom: 20px;
+}
+
+.show-sidebar__btn--web span {
+    animation: fadeInBtn 2s linear forwards;
+}
+
+.show-sidebar__btn {
+    display: block;
+}
+
+.show-sidebar__btn button {
+    animation: fadeInBtn 2s linear forwards;
+}
