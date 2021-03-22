@@ -359,6 +359,7 @@ input {
     align-items: center;
     font-size: 32px;
     top: 0;
+    transform: translateX(-10px);
 }
 
 @media screen and (min-width:1280px) {
